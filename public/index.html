@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геккон AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <div class="header">
+            <img src="logo.png" alt="Геккон AI Logo" class="logo">
+            <h1>ГЕККОН <span>AI</span></h1>
+            <p class="subtitle">Нейросеть, которая ускорит анализ данных</p>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section" id="upload-section">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label class="upload-label">Загрузите PDF файл, с которым хотите работать</label>
+                <div class="upload-container" onclick="document.getElementById('file-input').click()">
+                    <input type="file" id="file-input" name="file" accept=".pdf" required>
+                    <p class="placeholder">Перетащите PDF файл или нажмите, чтобы выбрать его в проводнике</p>
+                </div>
+                <button class="submit-button" type="submit">Отправить</button>
+            </form>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section">
+            <label>Результат:</label>
+            <div id="resultat"><p id="result"></p></div>
+        </div>
+
+        <!-- Question Section -->
+        <div id="question-section">
+            <label>Введите вопрос:</label>
+            <input type="text" id="question-input" class="question-input" placeholder="Введите ваш вопрос здесь">
+            <button class="submit-button" onclick="submitQuestion()">Отправить вопрос</button>
+        </div>
+
+        <!-- Answer Section -->
+        <div id="answer-section">
+            <label>Ответ:</label>
+            <p id="answer" class="answer"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
